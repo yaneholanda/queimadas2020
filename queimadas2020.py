@@ -5,7 +5,7 @@ import numpy as np
 st.title('Queimadas no Brasil em 2020')
 
 DATE_COLUMN = 'data/hora'
-df = pd.read_csv("Focos_2020-01-01_2020-12-31")
+df = pd.read_csv("Focos_2020-01-01_2020-12-31.csv")
 
 st.subheader('Map of all pickups')
 hist_values = np.histogram(df[DATE_COLUMN].dt.hour, bins=24, range=(0,24))[0]
