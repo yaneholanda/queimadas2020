@@ -5,7 +5,7 @@ import numpy as np
 st.title('Queimadas no Brasil em 2020')
 
 df = pd.read_csv("Focos_2020-01-01_2020-12-31.csv")
-DATE_COLUMN = df['data/hora']
+DATE_COLUMN = df['datahora']
 
 
 st.subheader('Map of all pickups')
