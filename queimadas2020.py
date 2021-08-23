@@ -1,6 +1,7 @@
 import streamlit as st
-import pandas as pd
 import numpy as np
+import pandas as pd
+
 
 st.title('Queimadas no Brasil em 2020')
 
@@ -10,5 +11,7 @@ df = df.sample(frac=1).reset_index(drop=True)
 
 lat = df["latitude"]
 long = df ["longitude"]
+  
+  
 st.subheader('Map of all pickups')
 st.map(df)
