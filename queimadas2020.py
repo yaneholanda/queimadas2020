@@ -1,5 +1,7 @@
-map_data = pd.DataFrame(
-    np.random.randn(1000, 2) / [50, 50] + [37.76, -122.4],
-    columns=['lat', 'lon'])
+import pandas as pd
+import numpy as np
+
+df = pd.read_csv("Focos_2020-01-01_2020-12-31")
+map_data = df
 
 st.map(map_data)
