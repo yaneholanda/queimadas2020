@@ -1,6 +1,4 @@
-!pip install streamlit-folium
-
-
+pip install https://github.com/randyzwitch/streamlit-folium
 
 import pandas as pd
 import numpy as np
