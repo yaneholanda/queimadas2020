@@ -17,7 +17,7 @@ with st.echo():
     import folium
 
     # center on Liberty Bell
-    m = folium.Map(location= lat, long, zoom_start=16)
+    m = folium.Map(location= (lat, long), zoom_start=16)
 
     # add marker for Liberty Bell
     #tooltip = "Liberty Bell"
