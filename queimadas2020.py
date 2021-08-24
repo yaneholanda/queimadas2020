@@ -12,8 +12,8 @@ df.columns
 
 #lat = pd.to_numeric(df["latitude"], errors='coerce')
 #lon = pd.to_numeric(df["longitude"], errors='coerce')
-lat = df[latitude]
-long = df[longitude]
+lat = df['latitude']
+long = df['longitude']
 
 with st.echo():
     import streamlit as st
