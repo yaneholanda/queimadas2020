@@ -6,7 +6,11 @@ from streamlit_folium import folium_static
 import folium
 
 "# streamlit-folium"
-df = pd.read_csv('Focos_2020-01-01_2020-12-31.csv', index_col=0)
+
+
+col_list = ["datahora","satelite","pais","estado","municipio","bioma","diasemchuva","precipitacao","riscofogo","latitude","longitude","frp"]
+df = pd.read_csv('Focos_2020-01-01_2020-12-31.csv', index_col=0, usecols=col_list)
+
 
 df.columns
 
