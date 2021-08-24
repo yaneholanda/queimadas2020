@@ -1,29 +1,20 @@
-import pandas as pd
-import numpy as np
 import streamlit as st
-
 from streamlit_folium import folium_static
 import folium
 
-"# streamlit-folium"
-df = pd.read_csv("Focos_2020-01-01_2020-12-31.csv")
+page = st.radio("Select map type", ["Single map", "Dual map"], index=0)
 
-lat = df["latitude"]
-long = df["longitude"]
+# center on Liberty Bell
+if page == "Single map":
+    m = folium.Map(location=[39.949610, -75.150282], zoom_start=16)
+elif page == "Dual map":
+    m = folium.plugins.DualMap(location=[39.949610, -75.150282], zoom_start=16)
 
-with st.echo():
-    import streamlit as st
-    from streamlit_folium import folium_static
-    import folium
+# add marker for Liberty Bell
+tooltip = "Liberty Bell"
+folium.Marker(
+    [39.949610, -75.150282], popup="Liberty Bell", tooltip=tooltip
+).add_to(m)
 
-    # center on Liberty Bell
-    m = folium.Map(location=[lat, long], zoom_start=16)
-
-    # add marker for Liberty Bell
-    #tooltip = "Liberty Bell"
-    #folium.Marker(
-    #    [39.949610, -75.150282], popup="Liberty Bell", tooltip=tooltip
-    #).add_to(m)
-
-    # call to render Folium map in Streamlit
-    folium_static(m)
+# call to render Folium map in Streamlit
+folium_static(m)
