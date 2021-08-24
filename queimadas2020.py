@@ -9,7 +9,7 @@ import folium
 df = pd.read_csv("Focos_2020-01-01_2020-12-31.csv")
 
 lat = df["latitude"]
-long = df["longitude""]
+long = df["longitude"]
 
 with st.echo():
     import streamlit as st
