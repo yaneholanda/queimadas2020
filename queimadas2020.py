@@ -7,7 +7,7 @@ import folium
 
 "# streamlit-folium"
 
-df = pd.read_csv('Focos_2020-01-01_2020-12-31.csv', index_col=0, sep =";")
+df = pd.read_csv('Focos_2020-01-01_2020-12-31.csv', sep =";")
 
 
 df.columns
@@ -23,7 +23,7 @@ with st.echo():
     import folium
 
     # center on Liberty Bell
-    m = folium.Map(location= (lat, lon), zoom_start=16)
+    m = folium.Map(location= (lat, long), zoom_start=16)
 
     # add marker for Liberty Bell
     #tooltip = "Liberty Bell"
