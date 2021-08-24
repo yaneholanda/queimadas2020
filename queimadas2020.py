@@ -1,5 +1,3 @@
-pip install git+https://github.com/randyzwitch/streamlit-folium
-
 import pandas as pd
 import numpy as np
 import streamlit as st
