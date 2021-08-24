@@ -8,6 +8,8 @@ import folium
 "# streamlit-folium"
 df = pd.read_csv("Focos_2020-01-01_2020-12-31.csv")
 
+df.columns
+
 #lat = pd.to_numeric(df["latitude"], errors='coerce')
 #lon = pd.to_numeric(df["longitude"], errors='coerce')
 lat = df["latitude"]
