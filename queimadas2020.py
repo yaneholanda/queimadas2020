@@ -1,4 +1,4 @@
-pip install streamlit-folium
+!pip install streamlit-folium
 
 
 
