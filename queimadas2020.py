@@ -14,8 +14,8 @@ df.columns
 
 #lat = pd.to_numeric(df["latitude"], errors='coerce')
 #lon = pd.to_numeric(df["longitude"], errors='coerce')
-lat = df['latitude']
-long = df['longitude']
+latitude = df['latitude']
+longitude = df['longitude']
 
 with st.echo():
     import streamlit as st
@@ -23,7 +23,12 @@ with st.echo():
     import folium
 
     # center on Liberty Bell
-    m = folium.Map(location= (lat, long), zoom_start=16)
+    m = folium.Map(location= [37.4601908, 126.4406957], zoom_start=16)
+    
+    for index,lat in enumerate(latitude):
+folium.Marker([lat,
+               place_lng[index]]).add_to(map)
+    
 
     # add marker for Liberty Bell
     #tooltip = "Liberty Bell"
