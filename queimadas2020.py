@@ -26,8 +26,8 @@ with st.echo():
     m = folium.Map(location= [37.4601908, 126.4406957], zoom_start=16)
     
     for index,lat in enumerate(latitude):
-folium.Marker([lat,
-               place_lng[index]]).add_to(map)
+               folium.Marker([lat,
+               longitude[index]]).add_to(map)
     
 
     # add marker for Liberty Bell
